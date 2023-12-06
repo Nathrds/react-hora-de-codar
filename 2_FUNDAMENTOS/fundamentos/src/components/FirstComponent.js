@@ -1,6 +1,11 @@
 // arquivo de estilo
 const FirstComponent = () => {
     // algum comentário
+
+    /*
+        Multi line
+     */
+    
     return (
         <div>
             {/* tem que ser dentro de algum elemento pai para comentar*/}
