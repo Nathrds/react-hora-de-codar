@@ -6,6 +6,14 @@ const Events = () => {
         console.log('Ativou o evento!');
     };
 
+    const renderSomething = (x) => {
+        if(x) {
+            return <h1>Renderizando isso!</h1>
+        } else {
+            return <h1>Tembém posso renderizar isso!</h1>
+        }
+    }; // podemos usar o JSX fora do return também
+
     return (
         <div>
             <div>
@@ -23,6 +31,10 @@ const Events = () => {
                 }}>
                     Clica aqui, por favor.
                 </button>
+            </div>
+            <div>
+                {renderSomething(true)}
+                {renderSomething(false)}
             </div>
         </div>
     );
