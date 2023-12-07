@@ -2,6 +2,7 @@
 import './App.css';
 
 import City from './assets/city.jpg'; // importando a imagem como componentes, se mudar terá que alterar só em um lugar
+import ConditionalRender from './components/ConditionalRender';
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 
@@ -20,6 +21,7 @@ function App() {
       </div>
       <ManageData />
       <ListRender />
+      <ConditionalRender />
     </div>
   );
 }
