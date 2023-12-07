@@ -2,6 +2,7 @@
 import './App.css';
 
 import City from './assets/city.jpg'; // importando a imagem como componentes, se mudar terá que alterar só em um lugar
+import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <img src={City} alt="Cidade" />
       </div>
       <ManageData />
+      <ListRender />
     </div>
   );
 }
