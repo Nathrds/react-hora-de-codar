@@ -1,5 +1,5 @@
 // import logo from './logo.svg'; não é necessária, pode apagar
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import './App.css';
 
 import City from './assets/city.jpg'; // importando a imagem como componentes, se mudar terá que alterar só em um lugar
@@ -8,9 +8,10 @@ import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 import ShowUserName from './components/ShowUserName';
 import CarDetails from './components/CarDetails';
+// import Fragment from './components/Fragment'; só para tirar o erro
 
 function App() {
-  const name2 = "Joaquim";
+  // const name2 = "Joaquim";
 
   const [userName] = useState('Maria');
 
@@ -46,6 +47,8 @@ function App() {
       {cars.map((car) => (
         <CarDetails brand={car.brand} color={car.color} km={car.km} newCar={car.newCar} />
       ))}
+      {/* fragments */}
+      <Fragment porpFragment='teste' />
     </div>
   );
 }
