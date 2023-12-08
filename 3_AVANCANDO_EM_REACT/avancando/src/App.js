@@ -10,6 +10,8 @@ import ShowUserName from './components/ShowUserName';
 import CarDetails from './components/CarDetails';
 import Container from './components/Container';
 import ExecuteFunction from './components/ExecuteFunction';
+import Message from './components/Message';
+import ChangeMessageState from './components/ChangeMessageState';
 // import Fragment from './components/Fragment'; só para tirar o erro
 
 
@@ -26,6 +28,12 @@ function App() {
 
   function showMessage() {
     console.log("evento do componente pai!");
+  }
+
+  const [message, setMessage] = useState("");
+
+  const handleMessage = (msg) => {
+    setMessage(msg);
   }
 
   return (
@@ -62,6 +70,9 @@ function App() {
       </Container>
       {/* Executar função */}
       <ExecuteFunction myFunction={showMessage} />
+      {/* state lift */}
+      <Message msg={message}/>
+      <ChangeMessageState handleMessage={handleMessage} />
     </div>
   );
 }
