@@ -8,7 +8,9 @@ import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 import ShowUserName from './components/ShowUserName';
 import CarDetails from './components/CarDetails';
+import Container from './components/Container';
 // import Fragment from './components/Fragment'; só para tirar o erro
+
 
 function App() {
   // const name2 = "Joaquim";
@@ -49,6 +51,10 @@ function App() {
       ))}
       {/* fragments */}
       <Fragment porpFragment='teste' />
+      {/* children */}
+      <Container myValue='testing'>
+        <p>E este é o conteúdo</p>
+      </Container>
     </div>
   );
 }
