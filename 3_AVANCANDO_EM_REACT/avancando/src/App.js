@@ -12,6 +12,7 @@ import Container from './components/Container';
 import ExecuteFunction from './components/ExecuteFunction';
 import Message from './components/Message';
 import ChangeMessageState from './components/ChangeMessageState';
+import UserDetails from './components/UserDetails';
 // import Fragment from './components/Fragment'; só para tirar o erro
 
 
@@ -35,6 +36,12 @@ function App() {
   const handleMessage = (msg) => {
     setMessage(msg);
   }
+
+  const users = [
+    {id: 1, name: "Ana", age: 16, job: "Estudante"},
+    {id: 2, name: "Macela", age: 32, job: "Arquiteta"},
+    {id: 3, name: "Joana", age: 50, job: "Esteticista"}
+  ];
 
   return (
     <div className="App">
@@ -73,6 +80,10 @@ function App() {
       {/* state lift */}
       <Message msg={message}/>
       <ChangeMessageState handleMessage={handleMessage} />
+      {/* desafio 4 */}
+      {users.map((user) => (
+        <UserDetails key={user.id} name={user.name} age={user.age} job={user.job} />
+      ))}
     </div>
   );
 }
