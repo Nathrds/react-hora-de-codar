@@ -5,3 +5,8 @@
     --color4: #52D9EB;
     --color5: #8E52EB;
 }
+
+h2, span {
+    color: #52D9EB;
+    font-size: 1.5em;
+}
