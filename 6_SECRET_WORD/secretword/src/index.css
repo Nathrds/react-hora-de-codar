@@ -1,0 +1,29 @@
+html, body {
+  height: 100%; /*deixar a altura !00% na tela para o degradê garantindo que a área esteja toda ocupada na altura*/
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #5177EA 0%, #52A8EB 100%);
+  color: #fff;
+}
+
+button {
+  background-color: #5D52EB;
+  color: #fff;
+  padding: 0 45px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  height: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: .4s;
+}
+
+button:hover {
+  background-color: #483cea;
+}
