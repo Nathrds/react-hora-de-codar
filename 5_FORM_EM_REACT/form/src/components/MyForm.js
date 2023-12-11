@@ -19,6 +19,13 @@ const MyForm = ({user}) => {
     event.preventDefault(); // parar o envio no botão o formulário não recarregar a página
     console.log('enviando o formulário');
     console.log(name, email);
+
+    // validação
+    // envio
+
+    // 7- limpar form (resetando)
+    setName("");
+    setEmail("");
   };
 
   return (
