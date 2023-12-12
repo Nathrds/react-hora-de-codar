@@ -40,7 +40,17 @@ function App() {
       },
       body: JSON.stringify(product),
     });
+    
+    // 3- carregamento dinâmico de dados
+    const addedProduct = await res.json();
+
+    setProducts((prevProducts) => [...prevProducts, addedProduct]);
+
+    // resetar os inputs
+    setName("");
+    setPrice("");
   };
+
 
   return (
     <div className="App">
