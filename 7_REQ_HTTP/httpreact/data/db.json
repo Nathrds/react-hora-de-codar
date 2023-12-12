@@ -64,6 +64,26 @@
       "name": "Tela",
       "price": "700",
       "id": 13
+    },
+    {
+      "name": "Tela",
+      "price": "700",
+      "id": 14
+    },
+    {
+      "name": "Suporte Microfone",
+      "price": "150",
+      "id": 15
+    },
+    {
+      "name": "Suporte Microfone 2",
+      "price": "99.90",
+      "id": 16
+    },
+    {
+      "name": "Suporte Microfone 2",
+      "price": "99.90",
+      "id": 17
     }
   ]
 }
