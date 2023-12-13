@@ -15,6 +15,9 @@ export const useFetch = (url) => {
    // 7 - tratando erros
    const [error, setError] = useState(null);
 
+   // 8 - desafio 6
+   const [itemId, setItemId] = useState(null);
+
    const httpConfig = (data, method) => {
     if(method === "POST") {
         setConfig({
@@ -25,6 +28,15 @@ export const useFetch = (url) => {
             body: JSON.stringify(data),
         });
         setMethod(method);
+    } else if(method === "DELETE") {
+        setConfig({
+            method,
+            headers: {
+                "Content-type": "application/json"
+            }
+        });
+        setMethod(method);
+        setItemId(data);  
     }
    };
 
@@ -59,6 +71,11 @@ export const useFetch = (url) => {
     
             const json = await res.json();
     
+            setCallFetch(json);
+        } else if(method === "DELETE") {
+            const deleteUrl = `${url}/${itemId}` // url de remoção 
+            const res = await fetch(deleteUrl, config)
+            const json = await res.json()
             setCallFetch(json);
         }
     }
