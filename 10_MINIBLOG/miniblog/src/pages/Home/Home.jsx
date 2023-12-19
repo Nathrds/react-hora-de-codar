@@ -7,7 +7,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 
 // components
-// import PostDetail from "../../components/PostDetail";
+import PostDetail from "../../components/PostDetail";
 
 const Home = () => {
   const { documents: posts, loading } = useFetchDocuments("posts");
@@ -43,7 +43,7 @@ const Home = () => {
             </Link>
           </div>
         )}
-        {/* {posts && posts.map((post) => <PostDetail key={post.id} post={post} />)} */}
+        {posts && posts.map((post) => <PostDetail key={post.id} post={post} />)}
       </div>
     </div>
   );
