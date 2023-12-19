@@ -2,7 +2,6 @@ import styles from "./EditPost.module.css";
 
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { useAuthValue } from "../../context/AuthContext";
 import { useFetchDocument } from "../../hooks/useFetchDocument";
 import { useUpdateDocument } from "../../hooks/useUpdateDocument";
 
@@ -31,11 +30,9 @@ const EditPost = () => {
       }
     }, [post]);
   
-    const { user } = useAuthValue();
-  
-    const navigate = useNavigate();
-  
     const { updateDocument, response } = useUpdateDocument("posts");
+    
+    const navigate = useNavigate();
   
     const handleSubmit = (e) => {
       e.preventDefault();
