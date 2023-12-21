@@ -6,4 +6,4 @@ const Button = ({title}) => {
   )
 }
 
-export default Button; 
+export default Button;
