@@ -3,6 +3,7 @@ import styles from "./Register.module.css";
 import {useState, useEffect} from 'react';
 
 import { useAuthentication } from "../../hooks/useAuthentication";
+import Button from "../../components/Button/Button";
 
 const Register = () => {
   const [displayName, setDisplayName] = useState("");
@@ -61,7 +62,7 @@ const Register = () => {
             <span>Confirmação de senha:</span>
             <input type="password" name="confirmPassword" required placeholder="Confirme a sua senha" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
           </label>
-          {!loading && <button className="btn">Cadastrar</button>}
+          {!loading && <Button title={"Cadastrar"} /> }
           {loading && (<button className="btn" disabled>Aguarde...</button>)}
           {error && <p className="error">{error}</p>}
         </form>
