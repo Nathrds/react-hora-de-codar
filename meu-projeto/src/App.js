@@ -5,6 +5,7 @@ import './App.css';
 import { HelloWord } from './components/HelloWord';
 import { SayMyName } from './components/SayMyName';
 import { Pessoa } from './components/Pessoa';
+import { Frase } from './components/Frase';
 
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
       <p>Soma: {sum(1, 2)}</p>
       <img src={url} alt="minha imagem" /> */}
       {/* <HelloWord /> */}
+      <h1>Testando CSS</h1>
+      <Frase />
+      <Frase />
       <SayMyName nome="Nathalia" />
       <SayMyName nome="Ana" />
       <SayMyName nome={nome}/>
